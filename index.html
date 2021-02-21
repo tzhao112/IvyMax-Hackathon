@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="The Literate Future" content="width=device-width">
+    <title></title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+		<!-- Head -->
+  </head>
+  <body>
+    <script src="script.js"></script>
+		<!-- Body -->
+
+		<h1> The Literacy Project </h1>
+		<img src="https://live.staticflickr.com/3672/13862210495_c3d22511e9_b.jpg" width="260">
+
+  <div class="tab">
+  <button class="tablinks" onclick="openPage(event, 'Home')" id="defaultOpen">Home</button>
+  <button class="tablinks" onclick="openPage(event, 'Genres')">Genres</button>
+  <button class="tablinks" onclick="openPage(event, 'Books')">Books</button>
+</div>
+
+<div id="Home" class="tabcontent">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+
+	<div class="tab">
+  <button class="tablinks" onclick="openPage(event, 'Illiteracy Risks')" id="defaultOpen">Illiteracy Risks</button>
+
+	</div>
+	<div class="tab">
+  <button class="tablinks" onclick="openPage(event, 'How We\'re Helping')" id="defaultOpen">How We're Helping</button>
+	</div>
+
+	<div class="tab">
+  <button class="tablinks" onclick="openPage(event, 'How You Can Help')" id="defaultOpen">How You Can Help</button>
+	</div>
+</div>
+
+<div id="Illiteracy Risks" class="tabcontent">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+		<p>1 in 4 children in America grow up without learning how to read <br> <br>
+Low literacy levels are correlated with poor health outcomes and higher rates of hospitalization <br></p>
+<img src="https://www.thoughtco.com/thmb/eR8Fo5mykLmyGUMZrvzPzt5mgyI=/2280x1314/filters:fill(auto,1)/GettyImages-171577097-6aaa396b5ad64b83b29ce722f4257de9.jpg" alt="Misspelled words on a blackboard" width="250">
+
+</div>
+
+<div id="How We're Helping" class="tabcontent">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+		<p>Our group created this simple site that has a quiz to assess the users’ interests so that our algorithm can suggest a book that suits them. </p>
+<img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8ZWR1Y2F0aW9ufGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt= "large library filled with books" width="230">
+</div>
+
+<div id="How You Can Help" class="tabcontent">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+		<p>Volunteer for local initiatives and charity organizations such as Reach Out and Read and the International Literacy Association <br> <br>
+Donate books and resources to at-risk populations through non-profits like the African Library Project  and Better World Books 
+</p>
+		<img src="https://tse1.mm.bing.net/th?id=OIP.k5M1MOgQv7ZA2sB5GhonhgHaE1&pid=Api" alt="Person offering a hand to someone climbing a hill" width="240">
+</div>
+
+
+<!-- Everything you want to put in the tab Genres go in this div-->
+<div id="Genres" class="tabcontent">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+  <p>Mystery - Genre of fiction that usually involves a murder by an unknown killer or some other crime to be solved<br> <br> 
+	Fantasy - Genre that features magical and supernatural elements that do not exist in the real world.<br> <br> 
+	Non-Fiction and History - A broad genre of books that is 99% true and has happened in the real world<br> <br> 
+	Biographies - A detailed description of a person's life. that portrays a person's experience of these life events<br> <br> 
+	Sports - Genre with info about sports, how they’re played, as well as autobiographies, or biographies of famous players or coaches of popular sports.</p>
+</div>
+
+
+<!-- Everything you wanna put in the quiz tab go in this div -->
+<div id="Books" class="tabcontent">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+  <h1 class = "glow">Which books are fitting for you?</h1>
+  <div style='transform: scale(0.65); position: relative; top: -100px;'>
+
+ 
+ <center><h1>1.) How old are you?</h1>
+    <form action="/submit-trivia">
+    <h2><label for="young"><input id="young" type="radio" name="age" value="young">5-9</label></h2>
+    <h2><label for="big"><input id = "big" type = "radio" name = "age" value = "big">10-14</label></h2>
+
+      <div id = "result"></div>
+  <center><button type = "button" onclick = "displayRadioValue()">Submit</button>
+
+<center><h2>2.) On average, how many minutes do you read books per week?</h2>
+
+    <form action = "/submit-trivia2">
+   <h2> <label for = "low"><input id = "low" type = "radio" name = "level" value = "low">0-90</label></h2>
+    <h2><label for = "medium"><input id = "medium" type = "radio" name = "level" value = "medium">90-210</label>      </h2>
+    <h2><label for = "high"><input id = "high" type = "radio" name = "level" value = "high">>210</label></h2>
+
+</center>
+
+
+
+  <div id = "finish"></div>
+      <center><button type = "button" onclick = "displayLevel()">Submit</button>
+
+
+
+<center><h2>3.) Which of the following genres do you enjoy reading the most?(check genres tab)</h2>
+
+  <form action = "/submit-trivia3">
+   <h2> <label for = "mystery"><input id = "mystery" type = "radio" name = "genre" value = "mystery">Mystery</label></h2>
+    <h2><label for = "fantasy"><input id = "fantasy" type = "radio" name = "genre" value = "fantasy">Fantasy</label>      </h2>
+    <h2><label for = "nonfiction"><input id = "nonfiction" type = "radio" name = "genre" value = "nonfiction">Nonfiction</label></h2>
+    <h2><label for = "bio"><input id = "bio" type = "radio" name = "genre" value = "bio">Biography</label>
+    <h2><label for = "sports"><input id = "sports" type = "radio" name = "genre" value = "sports">Sports</label>
+
+    <div id = "done"></div>
+      <button type = "button" onclick = "displayGenre()">Submit</button>
+    <br>
+
+<button type = "button" onclick = "giveBook()">Get your book results!</button>
+<div id='x'></div>
+<div id = 'y'></div>
+
+
+
+
+</div></center>
+
+</div>
+
+
+  </body>
+</html>
